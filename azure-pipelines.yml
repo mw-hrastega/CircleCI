@@ -1,9 +1,5 @@
 pool:
-   vmImage: 'Ubuntu 16.04'
- steps:
-   - task: InstallMATLAB@0
-   - task: RunMATLABCommand@0
-     inputs:
-       command: "disp('Hello World')"
-       
-       
+  vmImage: 'Ubuntu 16.04'
+steps:
+  - script: wget -qO- --retry-connrefused https://storage.googleapis.com/matlabimagesus/public/install.sh | sudo -E bash
+  - script: matlab -batch "disp('Hello World')"
