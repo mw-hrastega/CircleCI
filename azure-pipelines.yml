@@ -5,3 +5,5 @@
    - task: RunMATLABCommand@0
      inputs:
        command: "disp('Hello World')"
+- task: RunMATLABTests@0
+  inputs:
