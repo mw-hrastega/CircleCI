@@ -2,5 +2,9 @@
  steps:
    - task: RunMATLABTests@0
      inputs:
-       testResultsJUnit: 'junittestresults.xml'
-       codeCoverageCobertura: 'cobertura.xml'
+       testResultsJUnit: test-results/results.xml
+       codeCoverageCobertura: code-coverage/coverage.xml 
+       - task: PublishTestResults@2
+        condition: succeededOrFailed()
+        inputs:
+        testResultsFiles: test-results/results.xml
