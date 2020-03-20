@@ -1,7 +1,6 @@
  pool:
    vmImage: AH-HRASTEGA
  steps:
-   - task: InstallMATLAB@0
    - task: RunMATLABCommand@0
      inputs:
        command: "disp('Hello World')"
