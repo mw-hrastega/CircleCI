@@ -1,6 +1,9 @@
  pool: Default
  steps:
-   - task: RunMATLABCommand@0
+   - task: RunMATLABTests@0
+     inputs:
+       testResultsJUnit: 'junittestresults.xml'
+       codeCoverageCobertura: 'cobertura.xml'
      inputs:
        command: "disp('Hello World')"
        
