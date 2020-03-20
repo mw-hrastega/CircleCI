@@ -1,5 +1,5 @@
  pool:
-   vmImage: AH-HRASTEGA
+   vmImage: 'AH-HRASTEGA'
  steps:
    - task: RunMATLABCommand@0
      inputs:
