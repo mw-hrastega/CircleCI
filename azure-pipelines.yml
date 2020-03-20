@@ -1,10 +1,15 @@
- pool: Default
- steps:
+pool: Default
+steps:
    - task: RunMATLABTests@0
-     inputs:
-       testResultsJUnit: test-results/results.xml
-       codeCoverageCobertura: code-coverage/coverage.xml 
-       - task: PublishTestResults@2
-        condition: succeededOrFailed()
-        inputs:
-        testResultsFiles: test-results/results.xml
+    inputs:
+      testResultsJUnit: test-results/results.xml
+      codeCoverageCobertura: code-coverage/coverage.xml
+  - task: PublishTestResults@2
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFiles: test-results/results.xml
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: code-coverage/coverage.xml        
+        
