@@ -1,6 +1,6 @@
 pool: Default
 steps:
-  - task: RunMATLABTests@0
+ - task: RunMATLABTests@0
     inputs:
       testResultsJUnit: test-results/results.xml
       codeCoverageCobertura: code-coverage/coverage.xml
