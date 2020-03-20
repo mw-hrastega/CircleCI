@@ -1,4 +1,4 @@
- pool: AH-HRASTEGA
+ pool: 'AH-HRASTEGA'
  steps:
    - task: RunMATLABCommand@0
      inputs:
