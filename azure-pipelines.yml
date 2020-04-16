@@ -1,5 +1,5 @@
-pool: myPool
+pool: Default
 steps:
   - task: RunMATLABCommand@0
     inputs:
-      command: myscript
+      command: runAllMyTests
