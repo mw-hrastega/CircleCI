@@ -1,7 +1,7 @@
 pool: Default
 steps:
-  - powershell: Write-Host "##vso[task.prependpath]C:\Program Files\MATLAB\R2020a\bin"
-  #- script: echo '##vso[task.prependpath]C:\Program Files\MATLAB\R2019a\bin'
+  - powershell: Write-Host '##vso[task.prependpath]C:\Program Files\MATLAB\R2020a\bin'
+ #- bash: echo '##vso[task.prependpath]/usr/local/MATLAB/R2020a/bin'     (Linux)
   - task: RunMATLABCommand@0
     inputs:
       command: runAllMyTests
