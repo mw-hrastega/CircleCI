@@ -1,3 +1,4 @@
+disp(matlabroot)
 % Run all unit tests in my repository.
 results = runtests('IncludeSubfolders', true);
 
