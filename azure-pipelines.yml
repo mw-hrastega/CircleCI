@@ -2,6 +2,6 @@ pool:
   vmImage: 'Ubuntu 16.04'
 steps:
   - task: InstallMATLAB@0
-  - task: disp("Hello World.")
+  - task: RunMATLABCommand@0
     inputs:
       command: runAllMyTests
