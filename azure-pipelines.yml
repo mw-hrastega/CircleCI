@@ -1,4 +1,5 @@
-pool: Default
+pool:
+  vmImage: 'Ubuntu 16.04'
 steps:
   - task: RunMATLABCommand@0
     inputs:
