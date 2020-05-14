@@ -1,8 +1,5 @@
-pool:
-  vmImage: Ubuntu 16.04
+pool: myPool
 steps:
-  - task: InstallMATLAB@0
   - task: RunMATLABCommand@0
     inputs:
-      command: runAllMyTests
-
+      command: myscript
