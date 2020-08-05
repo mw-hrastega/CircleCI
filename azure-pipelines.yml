@@ -4,4 +4,4 @@ steps:
   - task: InstallMATLAB@0
   - task: RunMATLABCommand@0
     inputs:
-      command: myscript
+      command: runAllMyTests
