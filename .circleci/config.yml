@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
-  matlab: mathworks/matlab@dev:alpha
+  matlab: mathworks/matlab@0.1.4
+  codecov: codecov/codecov@1.1.1
 jobs:
   build:
     machine:
@@ -8,11 +9,7 @@ jobs:
     steps:
       - checkout
       - matlab/install
-      - matlab/run-command:
-          command: "disp('hi'); disp('wow');"
       - matlab/run-tests: 
-          test-results-junit: results.xml
-      - store_test_results:
-          path: results.xml
-      - store_artifacts:
-         path: results.xml
+          code-coverage-cobertura: coverage.xml
+      - codecov/upload: 
+          file: coverage.xml
