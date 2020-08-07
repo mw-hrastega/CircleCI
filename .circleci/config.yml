@@ -5,8 +5,10 @@ orbs:
   coveralls: coveralls/coveralls@1.0.6
 jobs:
   build:
-    machine:
-      image: ubuntu-1604:201903-01
+    docker:
+      - image: 'circleci/node:10.0.0'
+    #machine:
+    #  image: ubuntu-1604:201903-01
     steps:
       - checkout
       - matlab/install
