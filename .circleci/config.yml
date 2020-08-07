@@ -1,7 +1,8 @@
 version: 2.1
 orbs:
   matlab: mathworks/matlab@0.1.4
-  codecov: codecov/codecov@1.1.1
+ #codecov: codecov/codecov@1.1.1
+  coveralls: coveralls/coveralls@1.0.6
 jobs:
   build:
     machine:
@@ -11,5 +12,6 @@ jobs:
       - matlab/install
       - matlab/run-tests: 
           code-coverage-cobertura: coverage.xml
-      - codecov/upload: 
-          file: coverage.xml
+      #- codecov/upload: 
+      #    file: coverage.xml
+      - coveralls/upload
