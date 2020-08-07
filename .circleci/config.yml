@@ -12,6 +12,7 @@ jobs:
       - matlab/install
       - matlab/run-tests: 
           code-coverage-cobertura: coverage.xml
+      - coveralls/upload
       #- codecov/upload: 
       #    file: coverage.xml
-      - coveralls/upload
+     
