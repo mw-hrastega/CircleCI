@@ -5,3 +5,4 @@ steps:
   - task: RunMATLABTests@0
     inputs:
       codeCoverageCobertura: code-coverage/coverage.xml
+  - script: bash < (curl -s https://codecov.io/bash) 
