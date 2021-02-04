@@ -6,7 +6,7 @@ classdef ExampleTagTest < matlab.unittest.TestCase
     end
     methods (Test, TestTags = {'Unit'})
         function testB (testCase)
-            % test code
+            testCase.assertTrue(false)
         end
         function testC (testCase)
             % test code
