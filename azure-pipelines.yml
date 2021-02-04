@@ -5,7 +5,7 @@ steps:
   - task: RunMATLABTests@0
     inputs:
       selectByFolder: folderA; tests
-      selectByTag: Unit
+      selectByTag: 'Unit'
       codeCoverageCobertura: coverage.xml
   - script: bash <(curl -s https://codecov.io/bash)
   
